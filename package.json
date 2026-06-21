@@ -1,0 +1,47 @@
+{
+  "name": "axion-launcher",
+  "version": "1.0.0",
+  "description": "Custom desktop launcher for Axion SA-MP Server",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "keywords": [],
+  "author": "Axion Devs",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "child_process": "^1.0.2",
+    "electron-store": "^8.1.0",
+    "electron-updater": "^6.3.9",
+    "extract-zip": "^2.0.1",
+    "samp-query": "^0.1.5"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.axion.launcher",
+    "productName": "Axion Launcher",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "zoroog912-cmyk",
+        "repo": "axion-launcher"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Axion Launcher"
+    }
+  }
+}
