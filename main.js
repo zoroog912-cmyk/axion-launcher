@@ -19,6 +19,10 @@ const SERVERS = {
 // URL pointing directly to your compressed .zip modpack asset file
 const ASSET_ZIP_URL = "https://website.com/gta-assets/modpack.zip";
 
+// Configure autoUpdater parameters behavior
+autoUpdater.autoDownload = true;
+autoUpdater.autoInstallOnAppQuit = true;
+
 function createWindow() {
     mainWindow = new BrowserWindow({
         width: 1050,
